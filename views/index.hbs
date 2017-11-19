@@ -1,0 +1,26 @@
+
+<div class="container">
+    {{#if expressFlash}}
+    <div class="alert alert-success" role="alert">
+ {{ expressFlash }}
+</div>
+{{/if}}
+
+{{#if sessionFlash.message}}
+    <div class=" alert alert-{{ sessionFlash.type }}">
+         session flash :{{ sessionFlash.message }}
+    </div>
+{{/if}}
+</div>
+
+
+
+<div class="container">
+ <ul class="list-group">
+   {{#each articles}}
+    <li class="list-group-item">
+    <a href="/articles/{{this._id}}"> {{this.title}}</a>
+    </li>
+  {{/each}}
+</ul>
+</div>

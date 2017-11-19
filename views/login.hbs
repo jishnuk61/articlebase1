@@ -1,0 +1,49 @@
+
+
+<div class="container">
+    <div class="col-lg-6">
+
+ {{#if errors}}
+
+ {{#each errors}}
+    <div class="alert alert-danger" role="alert">
+ {{ this.msg }}
+
+</div>
+  {{/each}} 
+{{/if}}
+
+ {{#if messages}}
+
+ {{#each messages}}
+    <div class="alert alert-danger" role="alert">
+ {{ this }}
+
+</div>
+  {{/each}} 
+{{/if}}
+
+<form method='POST', action='/users/login'>
+ 
+  <div class="form-group">
+    <label for="username">User Name</label>
+    <input type="text" name="username" class="form-control" id="username" aria-describedby="usernamehelp" placeholder="enter the username for login">
+    <small id="usernamehelp" class="form-text text-muted"></small>
+  </div>
+
+  <div class="form-group">
+    <label for="password">Password</label>
+    <input type="password" name="password" class="form-control" id="password" aria-describedby="userpasswordhelp" placeholder="Enter ur password">
+    <small id="userpasswordhelp" class="form-text text-muted"></small>
+  </div>
+
+  {{!-- <div class="form-check">
+    <label class="form-check-label">
+      <input type="checkbox" class="form-check-input">
+      Check me out
+    </label>
+  </div> --}}
+  <input type="submit" class="btn btn-primary" value="submit">
+</form>
+</div>
+</div>

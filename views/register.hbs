@@ -1,0 +1,50 @@
+
+<div class="container">
+    <div class="col-lg-6">
+
+ {{#if errors}}
+
+ {{#each errors}}
+    <div class="alert alert-danger" role="alert">
+ {{ this.msg }}
+
+</div>
+  {{/each}} 
+{{/if}}
+
+<form method='POST', action='/users/register'>
+  <div class="form-group">
+    <label for="firstname">Name</label>
+    <input type="text" name="firstname" class="form-control" id="firstname" aria-describedby="firstnamehelp" placeholder="Enter First Name">
+    <small id="firstnamehelp" class="form-text text-muted"></small>
+  </div>
+  <div class="form-group">
+    <label for="username">User Name</label>
+    <input type="text" name="username" class="form-control" id="username" aria-describedby="usernamehelp" placeholder="enter the username for login">
+    <small id="usernamehelp" class="form-text text-muted"></small>
+  </div>
+ <div class="form-group">
+    <label for="useremail">Email</label>
+    <input type="email" name="useremail" class="form-control" id="useremail" aria-describedby="useremailhelp" placeholder="enter ur personal email">
+    <small id="useremailhelp" class="form-text text-muted"></small>
+  </div>
+  <div class="form-group">
+    <label for="userpassword">Password</label>
+    <input type="password" name="userpassword" class="form-control" id="userpassword" aria-describedby="userpasswordhelp" placeholder="Enter a strong password">
+    <small id="userpasswordhelp" class="form-text text-muted"></small>
+  </div>
+  <div class="form-group">
+    <label for="userconfirmpassword">Confirm Password</label>
+    <input type="password" name="userconfirmpassword" class="form-control" id="userconfirmpassword" aria-describedby="userconfirmpasswordhelp" placeholder="enter the same password as above">
+    <small id="userconfirmpasswordhelp" class="form-text text-muted"></small>
+  </div>
+  {{!-- <div class="form-check">
+    <label class="form-check-label">
+      <input type="checkbox" class="form-check-input">
+      Check me out
+    </label>
+  </div> --}}
+  <input type="submit" class="btn btn-primary" value="submit">
+</form>
+</div>
+</div>

@@ -1,0 +1,39 @@
+
+<div class="container">
+    <div class="col-lg-6">
+
+ {{#if errors}}
+
+ {{#each errors}}
+    <div class="alert alert-danger" role="alert">
+ {{ this.msg }}
+
+</div>
+  {{/each}} 
+{{/if}}
+
+<form method='POST', action='/articles/add'>
+  <div class="form-group">
+    <label for="articletitle">Title</label>
+    <input type="text" name="articletitle" class="form-control" id="articletitle" aria-describedby="articlehelp" placeholder="Enter article title">
+    <small id="articlehelp" class="form-text text-muted">You will need an article title to post an article</small>
+  </div>
+  {{!-- <div class="form-group">
+    <label for="articleauthor">Author</label>
+    <input type="text" name="articleauthor" class="form-control" id="articleauthor" aria-describedby="articleauthorhelp" placeholder="who wrote the article">
+    <small id="articleauthorhelp" class="form-text text-muted">who is the real author of this article</small>
+  </div> --}}
+  <div class="form-group">
+    <label for="articledescription">Article description</label>
+    <textarea class="form-control" name="articledescription" id="articledescription" rows="3"></textarea>
+  </div>
+  {{!-- <div class="form-check">
+    <label class="form-check-label">
+      <input type="checkbox" class="form-check-input">
+      Check me out
+    </label>
+  </div> --}}
+  <input type="submit" class="btn btn-primary" value="submit">
+</form>
+</div>
+</div>

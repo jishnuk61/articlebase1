@@ -1,0 +1,11 @@
+<div id="messages" class="messages">
+   
+ {{#each Object.keys(messages)}}
+{{#each messages[this.type]}}
+    <div class="alert alert-{{this.type}}">
+    {{this.message}}
+    </div>
+ {{/each}}  
+ {{/each}} 
+ </div> 
+
